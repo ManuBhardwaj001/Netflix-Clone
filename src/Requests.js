@@ -1,4 +1,4 @@
-const API_KEY = process.env.PUBLIC_API_KEY;
+const API_KEY = process.env.REACT_APP_TMDB_KEY;
 
 const requests = {
     fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
@@ -14,6 +14,6 @@ const requests = {
     // fetchWestern: `/discover/movie?api_key=${API_KEY}&with_genres=37`,
     // fetchAnimation: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
     // fetchTV: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
-}
+};
 
 export default requests;
