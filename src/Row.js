@@ -37,7 +37,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
                 )}
 
             </div>
-        </div>
+        </div>   
     )
 }
 
