@@ -13,11 +13,9 @@ function App() {
       {/* <HomeScreen /> */}
       <Router>
         <div>
-
           <Routes>
             <Route path="/about" element={<div>
-              <h1>About Page</h1>
-              <p>This is the about page content.</p>
+              <h1>TV Shows</h1>
             </div>} >
             </Route>
             <Route path="/" element={<HomeScreen />}>
