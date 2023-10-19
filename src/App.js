@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
-import HomeScreen from "./screens/Homescreen"
+import HomeScreen from "./screens/HomeScreen"
 import './App.css';
 import { auth } from './firebase';
-import LoginScreen from "./screens/LoginScreen"
+import LoginScreen from "./screens/LoginScreen";
+import ProfileScreen from './screens/ProfileScreen';
 import {
   BrowserRouter as Router,
   Routes,
@@ -37,7 +38,7 @@ function App() {
       unsubscribe();
     }
 
-  }, [])
+  }, [dispatch])
 
   return (
     <div className="app">
@@ -51,6 +52,8 @@ function App() {
             <Routes>
               <Route path="/"
                 element={<HomeScreen />}>
+              </Route>
+              <Route path='/profile' element={<ProfileScreen />}>
               </Route>
               {/* <Route path="/about" element={<div>
               <h1>TV Shows</h1>
