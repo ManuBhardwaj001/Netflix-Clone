@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+// import Netflix_Logo_RGB from "../public/images/Netflix_Logo_RGB.png"
 import "./Nav.css";
 import { useNavigate } from "react-router-dom";
 

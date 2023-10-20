@@ -30,7 +30,7 @@ function App() {
       }
       else {
         //Logged out
-        dispatch(logout)
+        dispatch(logout())
       }
     });
 
