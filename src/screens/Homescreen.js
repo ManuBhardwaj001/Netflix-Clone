@@ -22,6 +22,7 @@ function Homescreen() {
         <Row title="Horror Movies" fetchURL={requests.fetchHorrorMovies} />
         <Row title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
         <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
+        <Row title="SciFi" fetchURL={requests.fetchSciFi} />
 
         <>
             <h5 className="disclaimer" style={{ display: 'flex', justifyContent: 'center' }}>
