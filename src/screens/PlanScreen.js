@@ -12,7 +12,6 @@ const PlanScreen = () => {
 
     const loadCheckout = async (priceId) => {
         // Get a reference to the "checkout_sessions" collection
-        debugger
         const checkoutSessionsRef = db.collection("checkout_sessions");
 
         // Create a new checkout session document

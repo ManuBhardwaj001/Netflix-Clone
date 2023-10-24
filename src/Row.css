@@ -4,6 +4,11 @@
   margin-bottom: 30px;
 }
 
+.first-row  {
+  margin-top: -230px;
+  position: relative;
+}
+
 .row__posters {
   display: flex;
   overflow-y: hidden;
@@ -16,7 +21,6 @@
 }
 
 .row__poster {
-  /* max-height: 227px; */
   max-width: 320px;
   object-fit: contain;
   margin-right: 8px;

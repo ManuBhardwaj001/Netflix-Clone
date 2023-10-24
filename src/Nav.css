@@ -7,8 +7,8 @@
   z-index: 1;
 
   /* Animations */
-  transition-timing-function: ease-in;
-  transition: all 0.5s;
+  transition-timing-function: ease-out;
+  transition: all 1s;
 }
 
 .nav__contents {
@@ -23,8 +23,8 @@
 .nav__logo {
   position: fixed;
   left: 0;
-  width: 150px;
-  top: 2px;
+  width: 152px;
+  top: 1px;
   object-fit: contain;
   margin-right: 25px;
   padding-left: 55px ;
@@ -35,6 +35,7 @@
   cursor: pointer;
   position: fixed;
   right: 90px;
+  margin-top: -10px;
   width: 50px;
   object-fit: contain;
 }
