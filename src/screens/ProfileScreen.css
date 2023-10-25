@@ -1,61 +1,132 @@
-.profileScreen {
-  height: 100vh;
-  color: #fff;
-}
+@media screen and (min-width: 480px) {
+  .profileScreen {
+    height: 100%;
+    color: #fff;
+  }
 
-.profileScreen__body {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 8%;
-  max-width: 800px;
-}
+  .profileScreen__body {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8%;
+    max-width: 800px;
+  }
 
-.profileScreen__info {
-  display: flex;
-}
+  .profileScreen__info {
+    display: flex;
+    font-size: x-large;
+  }
 
-.profileScreen__body > h1 {
-  font-size: 60px;
-  font-weight: 400;
-  border-bottom: 1px solid #282c2d;
-  margin-bottom: 20px;
-}
+  .profileScreen__body > h1 {
+    font-size: 60px;
+    font-weight: 400;
+    z-index: 1;
+    border-bottom: 1px solid #282c2d;
+    margin-bottom: 20px;
+  }
 
-.profileScreen__info > img {
-  height: 100px;
-}
+  .profileScreen__info > img {
+    height: 100px;
+  }
 
-.profileScreen__details {
-  color: #fff;
-  margin-left: 25px;
-  flex: 1;
-}
+  .profileScreen__details {
+    color: #fff;
+    margin-left: 20px;
+    flex: 1;
+  }
 
-.profileScreen__details > h2 {
-  background-color: gray;
-  padding: 15px;
-  font-size: 15px;
-  padding-left: 20px;
-}
+  .profileScreen__details > h2 {
+    background-color: gray;
+    padding: 15px;
+    font-size: 15px;
+    padding-left: 20px;
+  }
 
-.profileScreen__signout {
-  padding: 10px 20px;
-  font-size: 1rem;
-  margin-top: 5%;
-  width: 100%;
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  background-color: #e50914;
+  .profileScreen__signout {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 5%;
+    width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #e50914;
+  }
+  .profileScreen__plans > h3 {
+    border-bottom: solid 1px #282c2d;
+    padding-bottom: 10px;
+  }
+  .profileScreen__plans {
+    margin-top: 20px;
+  }
 }
-.profileScreen__plans > h3 {
-  border-bottom: solid 1px #282c2d;
-  padding-bottom: 10px;
-}
-.profileScreen__plans {
-  margin-top: 20px;
+@media screen and (max-width: 480px) {
+  .profileScreen {
+    height: 100vh;
+    color: #fff;
+  }
+
+  .profileScreen__body {
+    display: flex;
+    /* justify-content: center; */
+    flex-direction: column;
+    width: 50%;
+    padding: 8%;
+    max-width: 20rem;
+  }
+
+  .profileScreen__info {
+    display: flex;
+    font-size: x-large;
+  }
+
+  .profileScreen__body > h1 {
+    font-size: 2rem;
+    font-weight: 400;
+    z-index: 1;
+    margin-top: 3rem;
+    border-bottom: 1px solid #282c2d;
+    margin-bottom: 2rem;
+  }
+
+  .profileScreen__info > img {
+    height: 3rem;
+  }
+
+  .profileScreen__details {
+    color: #fff;
+    margin-left: 1rem;
+    flex: 1;
+  }
+
+  .profileScreen__details > h2 {
+    background-color: gray;
+    padding: 15px;
+    font-size: 15px;
+    padding-left: 20px;
+  }
+
+  .profileScreen__signout {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 5%;
+    width: 100%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #e50914;
+  }
+  .profileScreen__plans > h3 {
+    border-bottom: solid 1px #282c2d;
+    padding-bottom: 10px;
+  }
+  .profileScreen__plans {
+    margin-top: 20px;
+  }
 }
