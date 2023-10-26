@@ -38,10 +38,9 @@ function SignupScreen() {
             <input ref={passwordRef} placeholder="Password" type="password" />
             <button onClick={signIn} type="submit">Sign In</button>
 
-            <h4>
-                <span className="signupScreen__gray">New to Netflix? </span>
-                <span onClick={register} className="signupScreen__link">Sign Up now</span>
-            </h4>
+            <div className="singupScreen__register">
+                <span className="signupScreen__gray">New to Netflix? </span><span onClick={register} className="signupScreen__link">Sign Up now</span>
+            </div>
         </form>
     </div>;
 }
