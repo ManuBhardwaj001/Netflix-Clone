@@ -13,19 +13,24 @@
   top: 2.6rem;
 }
 
+.loginScreen__button:hover{
+transition: 259ms;
+background: #c11119;
+transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
+}
 .loginScreen__logo {
-  position: fixed;
+  position: absolute;
   object-fit: contain;
   left: 8.5rem;
   width: 11.5rem;
 }
 
 .loginScreen__button {
-  position: fixed;
+  position: absolute;
   right: 9.563rem;
   line-height: 1;
   font-size: 0.875rem;
-  font-weight: 400;
+  font-weight: bold;
   width: auto;
   min-height: 2rem;
   margin-top: 12px;
@@ -89,7 +94,7 @@
 }
 
 .loginScreen__input {
-  margin: 1.5 rem;
+  margin: 1.5rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -102,16 +107,18 @@
 }
 
 .loginScreen__input > form > input {
-  padding: 1.5rem 1rem 0.5rem;
-  outline-width: 0px;
+  padding: 1rem 1rem;
+  outline-width: 4px;
   line-height: 1.5;
   border-radius: 0.3rem;
-  background: rgba(169, 169, 169, 0.422);
-  filter: opacity(50%);
-  border: none;
+  border: .5px solid rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 1);
+  /* filter: opacity(50%); */
+  background: rgba(0, 0, 0, 0.4);
   width: 20rem;
 }
 .loginScreen__getStarted {
+  display: flex;
   font-size: 1rem;
   /* line-height: 1.5; */
   padding: 1rem 1.2rem;
@@ -121,4 +128,9 @@
   background-color: #e50914;
   font-weight: 600;
   cursor: pointer;
+}
+
+.loginScreen__input > form > input::placeholder {
+  /* Most modern browsers support this now. */
+  color: rgba(255, 255, 255, 0.7);
 }
