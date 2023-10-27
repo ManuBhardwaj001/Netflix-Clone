@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-// import Netflix_Logo_RGB from "../public/images/Netflix_Logo_RGB.png"
+import Netflix_Logo_RGB from "../src/image/Netflix_Logo_RGB.png"
+import Netflix_Avatar from "../src/image/Netflix_Avatar.png"
 import "./Nav.css";
 import { useNavigate } from "react-router-dom";
 
@@ -23,16 +24,16 @@ function Nav() {
   return (<div className={`nav ${show && 'nav__black'}`}>
     <div className="nav__contents">
       <img className="nav__logo"
-        onClick={()=>{
+        onClick={() => {
           navigate("/")
         }}
-        src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="" />
+        src={Netflix_Logo_RGB} alt="" />
 
       <img className="nav__avatar"
         onClick={() => {
           navigate("/profile")
         }}
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png" alt="" />
+        src={Netflix_Avatar} alt="" />
 
     </div>
   </div>

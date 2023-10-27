@@ -24,11 +24,10 @@
   .nav__logo {
     position: fixed;
     left: 0;
-    max-width: 7rem;
-    top: 0rem;
+    max-width: 7.3rem;
+    top: 0.6rem;
     object-fit: contain;
-    /* margin-right: 3rem; */
-    padding-left: 2.5rem;
+    padding-left: 2.4rem;
     cursor: pointer;
   }
 
