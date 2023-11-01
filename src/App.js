@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+// import SignupScreen from './SignupScreen';
 
 function App() {
 
@@ -55,6 +56,8 @@ function App() {
               </Route>
               <Route path='/profile' element={<ProfileScreen />}>
               </Route>
+              {/* <Route path="/signup" element={<SignupScreen/>}>
+              </Route> */}
               {/* <Route path="/about" element={<div>
               <h1>TV Shows</h1>
             </div>} >
