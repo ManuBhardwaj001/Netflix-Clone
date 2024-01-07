@@ -26,8 +26,8 @@ function LoginScreen() {
                 ) : (
                     <>
                         <h1>
-                            Laughter. Tears. Thrills. Find it all on<br /> Netflix.</h1>
-                        <h2>Endless entertainment starts at just ₹&nbsp;149. Cancel anytime.</h2>
+                        Unlimited movies, TV shows and more</h1>
+                        <h2>Watch anywhere. Cancel anytime.</h2>
                         <h3>
                             Ready to watch? Enter your email to create or restart your membership.
                         </h3>

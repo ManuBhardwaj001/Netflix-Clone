@@ -52,7 +52,7 @@ function SignupScreen() {
                 </div>
                 <div className="signupScreen__recaptcha">
                     <p className="recaptcha">
-                        <span>This page is protected by Google reCAPTCHA to ensure you're not a bot.</span>
+                        <span>Sign in is protected by Google reCAPTCHA to ensure you’re not a bot.</span>
                         &nbsp;
                         <button className="captcha__learnMore">
                             Learn more.
