@@ -8,7 +8,7 @@
 
 .banner__contents {
   margin-left: 3.188rem;
-  padding-top: 14rem;
+  padding-top: 16.5rem;
   height: 220px;
 }
 
@@ -24,11 +24,11 @@
   display: flex;
   line-height: normal;
   letter-spacing: 0!;
-  font-weight: 400;
+  font-weight: 500;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
   font-size: 1.2vw;
-  width: 30%;
-  align-content: start;
+  width: 35%;
+  align-content: flex-start;
 }
 
 .banner__buttons {
@@ -38,7 +38,8 @@
 }
 
 .banner_button__play > svg {
-  margin-right: 0.5rem;
+  /* max-width: 1.8rem; */
+  margin-right: 0.7rem;
 }
 
 .banner_button__play {
@@ -50,35 +51,41 @@
   outline: none;
   border: none;
   color: black;
-  width: 140px;
-  padding: 0.8rem 1.4rem 0.8rem 0.8rem;
+  /* width: 140px; */
+  padding-left: 1.3rem;
+  padding-right: 1.6rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.6rem;
   margin: 1rem 0.8rem 1rem 0rem;
-  font-weight: 700;
-  font-size: 1.088rem;
-  border-radius: 0.2vw;
+  font-weight: 600;
+  font-size: 1.066rem;
+  border-radius: 0.3vw;
 }
 
 .banner_button__more {
   cursor: pointer;
   display: flex;
-  border: none;
+  justify-content: center;
+  align-items: center;
+  border: 0px;
+  border-radius: 4px;
   outline: none;
   color: #fff;
   font-size: 1.088rem;
   font-weight: 700;
   border-radius: 0.3vw;
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
-  padding-left: 2rem;
-  padding-right: 2.4rem;
-  align-items: center;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  padding-left: 1.3rem;
+  padding-right: 1.6rem;
+  /* padding: 0.8rem; */
   background-color: rgba(109, 109, 110, 0.7);
 }
 
 .banner_button__more > svg {
-  margin-right: 0.5rem;
-  max-width: 1.5rem;
-  line-height: 0.818rem;
+  margin-right: 0.7rem;
+  /* max-width: 1.5rem; */
+  /* line-height: 0.818rem; */
 }
 
 .banner_button__play:hover {
@@ -86,7 +93,7 @@
 }
 
 .banner_button__more:hover {
-  opacity: 0.8;
+  opacity: 0.8  ;
 }
 
 .banner--fadeBottom {
@@ -127,7 +134,7 @@
     font-weight: 400;
     font-size: 0.96rem;
     max-width: 30%;
-    align-content: start;
+    align-content: flex-start;
   }
 
   .banner--fadeBottom {

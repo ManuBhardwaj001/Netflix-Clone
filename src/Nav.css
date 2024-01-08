@@ -3,18 +3,22 @@
     position: fixed;
     top: 0px;
     padding: 2rem;
+    padding-left: 0rem;
     width: 100%;
+    display: flex;
     height: 0.5%;
     z-index: 1;
+    align-items: center;
 
     /* Animations */
     transition-timing-function: ease-out;
-    transition: all 1s;
+    transition: all 0.5s;
   }
 
   .nav__contents {
     display: flex;
-    justify-content: space-between;
+    padding: 0 4%;
+    align-items: center;
   }
 
   .nav__black {
@@ -22,21 +26,77 @@
   }
 
   .nav__logo {
-    position: fixed;
+    display: flex;
     left: 0;
     max-width: 7.3rem;
-    top: 0.6rem;
+    /* top: 0.6rem; */
+    margin-left: -0.7rem;
+    font-size: 14px;
+    height: 4rem;
+    margin-right: 0.5rem;
+    letter-spacing: 0 !important;
     object-fit: contain;
-    padding-left: 2.4rem;
     cursor: pointer;
+  }
+
+  /* .nav__second__container{
+    display: flex;
+  } */
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .nav__items {
+    cursor: pointer;
+    color: #ffffff;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    /* margin-top: -0.5rem; */
+    font-weight: 500;
+    font-size: 0.88rem;
+  }
+
+  .nav__items > li {
+    margin-left: 1.35rem;
+    transition: opacity 0.3s ease;
+  }
+
+  .nav__items > li:hover {
+    opacity: 0.7;
+  }
+
+  .nav__second {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 7.5%;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+
+  .search__icon {
+    color: #ffffff;
+    margin-right: 1rem;
+  }
+
+  .children {
+    display: flex;
+    color: #ffffff;
+    margin-right: 1rem;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  .bell__icon {
+    margin-right: 1rem;
   }
 
   .nav__avatar {
     cursor: pointer;
-    position: fixed;
-    right: 4rem;
-    margin-top: -1rem;
     width: 2rem;
+    align-items: center;
     object-fit: contain;
   }
 }
@@ -65,19 +125,18 @@
   }
 
   .nav__logo {
-    position: fixed;
     left: 0;
     width: 100px;
     top: 10px;
     object-fit: contain;
     margin-right: 25px;
+
     padding-left: 15px;
     cursor: pointer;
   }
 
   .nav__avatar {
     cursor: pointer;
-    position: fixed;
     right: 30px;
     margin-top: -8px;
     width: 30px;

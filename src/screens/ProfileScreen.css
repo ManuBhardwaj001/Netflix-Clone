@@ -58,7 +58,7 @@
     background-color: #e50914;
   }
 
-  .profileScreen__signout:hover{
+  .profileScreen__signout:hover {
     background: #000000;
     transition-duration: 255ms;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
