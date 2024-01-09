@@ -51,12 +51,10 @@
   outline: none;
   border: none;
   color: black;
+  line-height: 1rem;
   /* width: 140px; */
-  padding-left: 1.3rem;
-  padding-right: 1.6rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.6rem;
-  margin: 1rem 0.8rem 1rem 0rem;
+  padding: 0.5rem 1.5rem 0.6rem 1.3rem;
+  margin: 1rem 0.6rem 1rem 0rem;
   font-weight: 600;
   font-size: 1.066rem;
   border-radius: 0.3vw;
@@ -77,8 +75,7 @@
   padding-top: 0.6rem;
   padding-bottom: 0.6rem;
   padding-left: 1.3rem;
-  padding-right: 1.6rem;
-  /* padding: 0.8rem; */
+  padding-right: 1.5rem;
   background-color: rgba(109, 109, 110, 0.7);
 }
 
@@ -93,7 +90,7 @@
 }
 
 .banner_button__more:hover {
-  opacity: 0.8  ;
+  opacity: 0.8;
 }
 
 .banner--fadeBottom {
@@ -117,28 +114,28 @@
 
   .banner__contents {
     margin-left: 3.188rem;
-    padding-top: 14rem;
+    padding-top: 21rem;
     height: 220px;
   }
 
   .banner_title {
-    font-size: 3rem;
     font-weight: 700;
+    font-size: 2.5rem;
     height: 3.5rem;
   }
 
   .banner__description {
     width: 45rem;
     display: flex;
-    line-height: 1.8rem;
+    line-height: 1.5rem;
     font-weight: 400;
     font-size: 0.96rem;
-    max-width: 30%;
+    max-width: 50%;
     align-content: flex-start;
   }
 
   .banner--fadeBottom {
-    height: 13rem;
+    height: 19rem;
     background-image: linear-gradient(
       180deg,
       transparent,
@@ -166,25 +163,24 @@
     outline: none;
     border: none;
     color: black;
-    width: 140px;
-    padding: 0.8rem 1.4rem 0.8rem 0.8rem;
-    margin: 1rem 0.8rem 1rem 0rem;
+    width: 8.75rem;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 0.6vw;
     font-weight: 700;
     font-size: 1.088rem;
-    border-radius: 0.2vw;
   }
 
   .banner_button__more {
     cursor: pointer;
     display: flex;
+    align-items: center;
     border: none;
     outline: none;
     color: #fff;
     font-size: 1.088rem;
     font-weight: 700;
-    border-radius: 0.2vw;
-    padding: 0.8rem 1.4rem 0.8rem 0.8rem;
-    align-items: center;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 0.6vw;
     background-color: rgba(51, 51, 51, 0.5);
   }
 
@@ -213,28 +209,30 @@
   }
 
   .banner__contents {
-    margin-left: 30px;
-    padding-top: 440px;
-    height: 190px;
+    margin-left: 2rem;
+    padding-top: 21rem;
+    height: 220px;
   }
 
   .banner_title {
-    font-size: 2rem;
-    font-weight: 800;
-    /* padding-bottom: 1rem; */
-    height: 2rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    height: 3.5rem;
+    margin-bottom: 3rem;
   }
 
   .banner__description {
     width: 45rem;
-    line-height: 1.8rem;
+    display: flex;
+    line-height: 1.5rem;
     font-weight: 400;
-    font-size: 1.2rem;
-    max-width: 300px;
+    font-size: 0.96rem;
+    max-width: 75%;
+    align-content: flex-start;
   }
 
   .banner--fadeBottom {
-    height: 23rem;
+    height: 19rem;
     background-image: linear-gradient(
       180deg,
       transparent,
@@ -251,49 +249,42 @@
 
   .banner_button__play > svg {
     margin-right: 0.5rem;
-    /* width: 4rem; */
   }
 
   .banner_button__play {
     cursor: pointer;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #fff;
     outline: none;
     border: none;
     color: black;
-    /* padding: rem; */
-    width: 80px;
-    /* padding-left: 2rem; */
-    padding-right: 1rem;
-    padding-top: 1rem;
-    padding-bottom: 0.5rem;
-    margin-top: 1rem;
-    margin-right: 0.8rem;
-    margin-bottom: 1rem;
+    width: 6rem;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 0.6vw;
     font-weight: 700;
-    font-size: medium;
-    border-radius: 0.2vw;
+    font-size: 1.088rem;
   }
 
   .banner_button__more {
     cursor: pointer;
+    display: flex;
+    align-items: center;
     border: none;
     outline: none;
     color: #fff;
-    font-size: medium;
+    font-size: 1.088rem;
     font-weight: 700;
-    border-radius: 0.2vw;
-    padding-left: 1rem;
-    padding-right: 1.4rem;
-    margin-right: 1rem;
-    padding-top: 0.8rem;
-    padding-bottom: 1rem;
+    padding: 0.4rem 1rem 0.4rem 0.4rem;
+    border-radius: 0.6vw;
     background-color: rgba(51, 51, 51, 0.5);
   }
 
   .banner_button__more > svg {
     margin-right: 0.5rem;
+    max-width: 1.5rem;
+    line-height: 0.818rem;
   }
 
   .banner_button__play:hover {
