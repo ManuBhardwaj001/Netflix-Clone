@@ -1,48 +1,4 @@
-/* default */
-.row {
-  color: #fff;
-  margin-left: 3.188rem;
-  /* margin-bottom: 30px; */
-}
-
-.first-row {
-  margin-top: -9rem;
-  position: relative;
-}
-
-.row__posters {
-  display: flex;
-  overflow-y: hidden;
-  overflow-x: scroll;
-}
-
-.row__posters::-webkit-scrollbar {
-  display: none;
-}
-
-.row__title {
-  font-size: 1.4vw;
-  font-weight: 500;
-  margin: 2.563rem 0 0.7rem 0;
-}
-.row__poster {
-  max-width: 14.313rem;
-  overflow-clip-margin: content-box;
-  overflow: clip;
-  /* margin: 3vw 0; */
-  object-fit: contain;
-  margin-right: 0.3rem;
-  border-radius: 0.2vw;
-  transition: transform 450ms;
-}
-
-.row__poster:hover {
-  transform: scale(1.08);
-  opacity: 1;
-}
-
-/* medium */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 480px) {
   .row {
     color: #fff;
     margin-left: 3.188rem;
@@ -84,18 +40,24 @@
     transform: scale(1.08);
     opacity: 1;
   }
-}
 
-/* small */
-@media screen and (max-width: 600px) {
+  /* .row__posterLarge {
+    max-height: 250px;
+  } */
+
+  /* *::-webkit-scrollbar {
+    display: none;
+  } */
+}
+@media screen and (max-width: 480px) {
   .row {
     color: #fff;
-    margin-left: 2rem;
-    /* margin-bottom: 30px; */
+    margin-left: 30px;
+    margin-bottom: 15px;
   }
 
   .first-row {
-    margin-top: -10rem;
+    margin-top: -200px;
     position: relative;
   }
 
@@ -103,24 +65,17 @@
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
+    padding: 20px 20px 20px 0;
   }
 
   .row__posters::-webkit-scrollbar {
     display: none;
   }
 
-  .row__title {
-    font-size: 1.1rem;
-    font-weight: 500;
-    margin: 2.563rem 0 0.875rem 0;
-  }
   .row__poster {
-    max-width: 14.313rem;
-    overflow-clip-margin: content-box;
-    overflow: clip;
-    /* margin: 3vw 0; */
+    max-width: 200px;
     object-fit: contain;
-    margin-right: 0.3rem;
+    margin-right: 8px;
     border-radius: 0.2vw;
     transition: transform 450ms;
   }
@@ -128,5 +83,13 @@
   .row__poster:hover {
     transform: scale(1.08);
     opacity: 1;
+  }
+
+  .row__posterLarge {
+    max-height: 250px;
+  }
+
+  *::-webkit-scrollbar {
+    display: none;
   }
 }

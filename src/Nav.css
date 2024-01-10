@@ -83,6 +83,7 @@
 
 .search__icon {
   color: #ffffff;
+  cursor: pointer;
   margin: 0.15rem 0.92rem 0 0;
   /* margin-top: 0.1rem;
     margin-right: 1.1rem; */
@@ -91,12 +92,14 @@
 .children {
   display: flex;
   color: #ffffff;
+  cursor: pointer;
   /* margin-top: -0.1rem; */
   margin-right: 0.6rem;
   font-weight: 500;
   font-size: 0.87rem;
 }
 .bell__icon {
+  cursor: pointer;
   margin-top: 0.5rem;
   padding: 2px 6px 3px;
   margin-right: 0.52rem;
