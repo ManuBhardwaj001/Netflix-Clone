@@ -23,13 +23,6 @@ function Homescreen() {
         <Row title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
         <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
         <Row title="SciFi" fetchURL={requests.fetchSciFi} />
-
-        <>
-            <h5 className="disclaimer" style={{ display: 'flex', justifyContent: 'center' }}>
-                This website is for educational purposes and the clone of the real website. If you wish to visit the real website and want to watch the content, please go to&nbsp;
-                <a href="https://www.netflix.com/browse" target="_blank" rel="noopener noreferrer">Netflix</a>
-            </h5>
-        </>
     </div>
 }
 

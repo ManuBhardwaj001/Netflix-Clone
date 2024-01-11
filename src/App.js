@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
+import Footer from './Footer';
 // import SignupScreen from './SignupScreen';
 
 function App() {
@@ -66,6 +67,7 @@ function App() {
           )}
         </div>
       </Router >
+      <Footer />
     </div >
   );
 }
