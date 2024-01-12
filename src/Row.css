@@ -26,6 +26,7 @@
     margin: 2.563rem 0 0.875rem 0;
   }
   .row__poster {
+    cursor: pointer;
     max-width: 14.313rem;
     overflow-clip-margin: content-box;
     overflow: clip;
