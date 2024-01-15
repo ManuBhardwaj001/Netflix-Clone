@@ -1,10 +1,10 @@
 /* default */
 .signupScreen {
   max-width: 300px;
-  padding: 4.375rem;
+  padding: 3.5rem 4.25rem 2.5rem;
   border-radius: 0.25rem;
   margin-left: auto;
-  margin-top: -7rem;
+  margin-top: -9.65rem;
   margin-right: auto;
   background: rgba(0, 0, 0, 0.85);
 }
@@ -23,13 +23,13 @@
 
 .signupScreen > form > input {
   outline-width: 0px;
-  height: 40px;
+  height: 2.5rem;
   margin-bottom: 14px;
   color: #ffffff;
   background: #333;
   border-radius: 5px;
   border: none;
-  padding: 5px 15px;
+  padding-bottom: 1rem;
 }
 .signupScreen > form > button {
   padding: 16px 20px;
@@ -165,7 +165,7 @@
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 600px) and (max-width:768px) {
   .signupScreen {
     max-width: 300px;
     padding: 3.5rem;
@@ -178,7 +178,7 @@
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width:991px) {
   .signupScreen {
     max-width: 300px;
     padding: 3.5rem;
