@@ -22,7 +22,7 @@ function Banner() {
     }, []);
 
     useEffect(() => {
-        console.log(movie);
+        // console.log(movie);
     }, [movie]);
 
     function truncate(string, n) {
