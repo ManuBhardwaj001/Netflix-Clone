@@ -29,6 +29,9 @@
     background: #c11119;
     transition-timing-function: cubic-bezier(0.9, 0, 0.51, 1);
   }
+  .planScreen__plan--disabled > button {
+    background-color: gray !important;
+  }
 }
 
 @media screen and (max-width: 480px) {

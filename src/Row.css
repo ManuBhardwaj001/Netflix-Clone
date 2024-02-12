@@ -74,6 +74,7 @@
   }
 
   .row__poster {
+    cursor: pointer;
     max-width: 200px;
     object-fit: contain;
     margin-right: 8px;

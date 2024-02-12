@@ -17,7 +17,7 @@ function Row({ title, fetchURL, isLargeRow = false }) {
         fetchData();
     }, [fetchURL])
 
-    console.log(movies)
+    // console.log(movies)
 
     return (
         <div className={`row ${isLargeRow ? 'first-row' : ''}`}>
