@@ -44,7 +44,6 @@ function App() {
 
   return (
     <div className="app">
-      {/* <HomeScreen /> */}
       <Router>
         <div>
           {!user ? (

@@ -4,9 +4,10 @@ import Nav from "../Nav";
 import Banner from "../Banner";
 import Row from "../Row";
 import requests from "../Requests";
+import Footer from "../Footer";
 
 
-function Homescreen() {
+function HomeScreen() {
     return <div className="homeScreen">
 
         <Nav />
@@ -23,7 +24,9 @@ function Homescreen() {
         <Row title="Romance Movies" fetchURL={requests.fetchRomanceMovies} />
         <Row title="Documentaries" fetchURL={requests.fetchDocumentaries} />
         <Row title="SciFi" fetchURL={requests.fetchSciFi} />
+
+        <Footer/>
     </div>
 }
 
-export default Homescreen;
+export default HomeScreen;

@@ -10,9 +10,9 @@ import PlanScreen from "./PlanScreen";
 const ProfileScreen = () => {
     const user = useSelector(selectUser);
     return (<div className="profileScreen">
-        <Nav />
+        <Nav isProfileScreen={true} />
         <div className="profileScreen__body">
-            <h2 className="profileScreen__editProfile">Edit Profile</h2>
+            <h2 className="profileScreen__editProfile">Account</h2>
             <div className="profileScreen__info">
                 <img src={Netflix_Avatar} alt="" />
                 <div className="profileScreen__details">
