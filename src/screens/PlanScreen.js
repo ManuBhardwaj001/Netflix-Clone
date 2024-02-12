@@ -1,80 +1,92 @@
+import { loadStripe } from "@stripe/stripe-js";
 import React, { useEffect, useState } from "react";
-import db from "../firebase";
-import "./PlanScreen.css";
 import { useSelector } from "react-redux";
 import { selectUser } from "../features/userSlice";
-import { loadStripe } from "@stripe/stripe-js";
+import db from "../firebase";
+import "./PlanScreen.css";
 
-const PlanScreen = () => {
+function PlanScreen() {
     const [products, setProducts] = useState([]);
     const user = useSelector(selectUser);
     const stripePublicKey = process.env.REACT_APP_STRIPE_PUBLIC_KEY;
-
-    const loadCheckout = async (priceId) => {
-        // Get a reference to the "checkout_sessions" collection
-        const checkoutSessionsRef = db.collection("checkout_sessions");
-
-        // Create a new checkout session document
-        const docRef = await checkoutSessionsRef.add({
-            price: priceId,
-            success_url: window.location.origin,
-            cancel_url: window.location.origin,
-        });
-
-        docRef.onSnapshot(async (snap) => {
-            const { error, sessionId } = snap.data();
-            if (error) {
-                // Show an error to the customer
-                // Inspect your cloud function logs in Firebase Console
-                alert(`An error occurred: ${error.message}`);
-            }
-            if (sessionId) {
-                // We have a session, let's redirect to checkout
-                // Initialize Stripe
-                const stripe = await loadStripe(stripePublicKey);
-                stripe.redirectToCheckout({ sessionId });
-            }
-        });
-    };
+    const [subscription, setSubscription] = useState(null);
 
     useEffect(() => {
-        db.collection("products")
-            .where("active", "==", true)
+        db.collection('customers')
+            .doc(user.uid)
+            .collection('subscriptions')
             .get()
-            .then((querySnapshot) => {
-                const productsData = {};
-                querySnapshot.forEach(async (productDoc) => {
-                    productsData[productDoc.id] = productDoc.data();
-                    const priceSnap = await productDoc.ref.collection("prices").get();
-                    priceSnap.docs.forEach((price) => {
-                        productsData[productDoc.id].prices = {
-                            priceId: price.id,
-                            priceData: price.data(),
-                        };
+            .then(querySnapshot => {
+                querySnapshot.forEach(async subscription => {
+                    setSubscription({
+                        role: subscription.data().role,
+                        current_period_end: subscription.data().current_period_end.seconds,
+                        current_period_start: subscription.data().current_period_start.seconds,
                     });
                 });
-                setProducts(productsData);
+            });
+    }, [user.uid])
+
+    useEffect(() => {
+        db.collection('products')
+            .where('active', '==', true)
+            .get().then(querySnapshot => {
+                const products = {};
+                querySnapshot.forEach(async productDoc => {
+                    products[productDoc.id] = productDoc.data();
+                    const priceSnap = await productDoc.ref.collection('prices').get();
+                    priceSnap.docs.forEach(price => {
+                        products[productDoc.id].prices = {
+                            priceId: price.id,
+                            priceData: price.data()
+                        }
+                    })
+                });
+                setProducts(products);
             });
     }, []);
 
-    console.log(products);
-    return (
-        <div className="planScreen">
-            {Object.entries(products).map(([productId, productData]) => {
-                return (
-                    <div className="planScreen__plan">
-                        <div className="planScreen__info">
-                            <h5>{productData.name}</h5>
-                            <h6>{productData.description}</h6>
-                        </div>
-                        <button onClick={() => loadCheckout(productData.prices.priceId)}>
-                            Subscribe
-                        </button>
+
+    const loadCheckout = async (priceId) => {
+        const docRef = await db.collection("customers").doc(user.uid).collection("checkout_sessions")
+            .add({
+                price: priceId,
+                success_url: window.location.origin,
+                cancel_url: window.location.origin,
+            });
+        docRef.onSnapshot(async (snap) => {
+            const { error, sessionId } = snap.data();
+            if (error) {
+                alert(`An error occured: ${error.message}`);
+            }
+            if (sessionId) {
+                const stripe = await loadStripe(stripePublicKey);
+                stripe.redirectToCheckout({ sessionId })
+            };
+        });
+    };
+
+    return <div className="PlanScreen">
+        {subscription && (
+            <p>Renewal Date: {new Date(subscription?.current_period_end * 1000).toLocaleDateString()}</p>
+        )}
+        {Object.entries(products).map(([productId, productData]) => {
+
+            const isCurrentPackage = productData.name?.toLowerCase().includes(subscription?.role)
+
+            return (
+                <div key={productId} className={` ${isCurrentPackage ? "planScreen__plan--disabled" : ""} planScreen__plan`}>
+                    <div className="planScreen__info">
+                        <h5>{productData.name}</h5>
+                        <h6>{productData.description}</h6>
                     </div>
-                );
-            })}
-        </div>
-    );
-};
+                    <button onClick={() => !isCurrentPackage && loadCheckout(productData.prices.priceId)}>
+                        {isCurrentPackage ? "Current Package" : "Subscribe"}
+                    </button>
+                </div>
+            );
+        })}
+    </div>;
+}
 
 export default PlanScreen;
