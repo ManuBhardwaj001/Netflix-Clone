@@ -3,7 +3,6 @@ import HomeScreen from "./screens/HomeScreen"
 import './App.css';
 import { auth } from './firebase';
 import LoginScreen from "./screens/LoginScreen";
-import ProfileScreen from './screens/ProfileScreen';
 import {
   BrowserRouter as Router,
   Routes,
@@ -11,7 +10,8 @@ import {
 } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout, selectUser } from './features/userSlice';
-import Footer from './Footer';
+import Account from './screens/Account';
+// import Footer from './Footer';
 // import SignupScreen from './SignupScreen';
 
 function App() {
@@ -54,7 +54,7 @@ function App() {
               <Route path="/"
                 element={<HomeScreen />}>
               </Route>
-              <Route path='/profile' element={<ProfileScreen />}>
+              <Route path='/profile' element={<Account />}>
               </Route>
               {/* <Route path="/signup" element={<SignupScreen/>}>
               </Route> */}
@@ -66,7 +66,7 @@ function App() {
           )}
         </div>
       </Router >
-      <Footer />
+      {/* <Footer /> */}
     </div >
   );
 }

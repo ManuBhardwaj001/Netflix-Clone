@@ -1,4 +1,67 @@
-@media screen and (min-width: 480px) {
+.Account__main {
+  background: #f3f3f3;
+  height: 100%;
+}
+
+.bd__wrapper {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: inherit;
+}
+
+.bd__container {
+  margin-top: 0px;
+  margin-left: 0px;
+  justify-content: center;
+  padding: 0px;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.bd__box {
+  display: inline-flex;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  flex-wrap: nowrap;
+  padding-bottom: 5rem;
+  flex-direction: row;
+}
+
+
+.account__inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.profileScreen__account {
+  color: #333;
+  font-size: 2.15rem;
+  margin: 0 0 0.55em;
+  font-weight: 500;
+}
+
+.member__since__svg {
+  display: inline-flex;
+  margin-right: 5px;
+  align-items: center;
+}
+
+.member__since {
+  align-items: center;
+  color: #555;
+  display: inline-flex;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-left: 20px;
+  padding: 5px 14px 5px 0;
+  text-align: center;
+}
+
+.account__details {
+}
+
+/* @media screen and (min-width: 480px) {
   .profileScreen {
     height: 100%;
     background: #fff;
@@ -23,13 +86,15 @@
     font-size: x-large;
   }
 
-  .profileScreen__editProfile {
+  .profileScreen__account {
     font-size: 30px;
     font-weight: 400;
+    padding-left: 40px;
     z-index: 1;
     border-bottom: 1px solid #282c2d;
     margin-bottom: 20px;
   }
+
 
   .profileScreen__info > img {
     height: 35px;
@@ -81,7 +146,7 @@
 
   .profileScreen__body {
     display: flex;
-    /* justify-content: center; */
+    justify-content: center;
     flex-direction: column;
     width: 50%;
     padding: 8%;
@@ -137,4 +202,4 @@
   .profileScreen__plans {
     margin-top: 20px;
   }
-}
+} */
